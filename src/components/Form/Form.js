@@ -48,7 +48,7 @@ export default class Form extends Component {
         var title,imageURL,imageTitle,nameTitle,priceTitle,updateLink;
           if(this.props.currentProduct===0){
             title="Add Product"
-            imageURL = <img alt="product" src={this.state.product.image_url}/>
+            imageURL = <img alt="product" src={this.state.image_url}/>
             imageTitle = 'Image URL'
             nameTitle = 'Name'
             priceTitle = 'Price'

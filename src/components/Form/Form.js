@@ -17,7 +17,7 @@ export default class Form extends Component {
         this.handleSubmit=this.handleSubmit.bind(this)
     }
     componentDidUpdate(prevProps){
-        if(prevProps.currentProduct !== this.props.currentProduct){
+        if(prevProps.currentProduct !== this.props.currentProduct&&this.props.currentProduct !==0){
             console.log(this.props.currentProduct.data[0])
            this.setState({product:this.props.currentProduct.data[0]})
         }else{}
@@ -48,7 +48,7 @@ export default class Form extends Component {
         var title,imageURL,imageTitle,nameTitle,priceTitle,updateLink;
           if(this.props.currentProduct===0){
             title="Add Product"
-            imageURL = <img alt="product" src={this.state.image_url}/>
+            imageURL = <img className="productIMG" alt="product" src={this.state.image_url}/>
             imageTitle = 'Image URL'
             nameTitle = 'Name'
             priceTitle = 'Price'

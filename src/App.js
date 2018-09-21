@@ -24,6 +24,7 @@ class App extends Component {
     })
   }
   updateInventory(inventory){
+    
     this.setState({inventory})
   }
   updateProduct(id){    
